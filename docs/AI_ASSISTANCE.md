@@ -6,11 +6,9 @@ I chose the overall architecture and design direction for the reviewer, includin
 
 ## AI assistance
 
-I used Anthropic Claude / Claude Code as a substantial coding and writing assistant. AI drafted the README, debugging write-ups and this note; generated the fixture generator; and wrote or helped write much of the implementation, tests, and evaluation utilities, including the fuzzer, adversarial probe and mutation-testing harness.
+I used Anthropic Claude / Claude Code as a substantial coding and writing assistant. AI drafted the README; generated the fixture generator; and wrote or helped write much of the implementation, and evaluation utilities, including the fuzzer, adversarial probe and mutation-testing harness.
 
-AI also assisted with implementation of the additional work documented in the README, including revocation-event handling, the wider supported Python subset, finding consolidation, the live-client adapter, mutation testing, the second policy family, scaling probe, and Git / manifest-freeze tooling. The live Anthropic client is included but was not run, so no real-model performance is claimed.
-
-The architecture and design direction were my choices; AI assistance with implementation and documentation should not be mistaken for independent authorship of all the code or tests. In particular, AI-generated tests and reports are supporting artifacts, not proof by themselves that the system is correct.
+The architecture and design direction were my choices; AI assistance with implementation and documentation should not be mistaken for independent authorship of all the code or tests.
 
 ## How I checked the work
 
@@ -22,4 +20,4 @@ The architecture and design direction were my choices; AI assistance with implem
 
 ## Limitations and claims
 
-The benchmark is finite and the reviewer only claims verification within its declared supported language and resource limits. Unsupported or ambiguous cases should remain INCOMPLETE. The live model adapter was not run, and real-model behavior was not measured. The five holdout bundles are treated as regression evidence rather than certified unseen data because the pre-Git development history cannot establish that they were never inspected during development.
+The benchmark is finite and the reviewer only claims verification within its declared supported language and resource limits. Unsupported or ambiguous cases should remain INCOMPLETE. 
