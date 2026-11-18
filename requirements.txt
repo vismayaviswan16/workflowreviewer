@@ -1,0 +1,2 @@
+# Runtime and tests use only the Python 3.12 standard library (no third-party dependencies to pin).
+# Optional live model client would add its SDK here with an exact version; none is used in this submission.
