@@ -1,0 +1,27 @@
+D13 blocker BEFORE fix: {
+ "category": "runtime_error",
+ "rule_ref": null,
+ "artifact": "code:code1",
+ "location": "line 8",
+ "counterexample": {
+  "ticket": {
+   "category": "__other__",
+   "urgent": false,
+   "waiting": null
+  },
+  "expected_route": "normal_queue",
+  "actual_route": "<error>",
+  "expected_trace": [
+   "default"
+  ],
+  "actual_trace": [
+   "L8"
+  ],
+  "cells_affected": 2,
+  "of_cells": 24,
+  "mode": "exhaustive",
+  "verified_by_reevaluation": true,
+  "note": "waiting is in minutes"
+ }
+}
+expected label: rule_ref='RD'

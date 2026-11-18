@@ -1,0 +1,344 @@
+{
+ "cases": 19,
+ "correct": 19,
+ "false_passes": 0,
+ "false_blocks": 0,
+ "by_type": {
+  "valid": {
+   "correct": 6,
+   "of": 6
+  },
+  "defective": {
+   "correct": 11,
+   "of": 11
+  },
+  "incomplete": {
+   "correct": 2,
+   "of": 2
+  }
+ },
+ "rows": [
+  {
+   "id": "N01",
+   "kind": "valid",
+   "expected": "PASS",
+   "actual": "PASS",
+   "ok": true,
+   "false_pass": false,
+   "false_block": false,
+   "blockers": []
+  },
+  {
+   "id": "N02",
+   "kind": "valid_unusual",
+   "expected": "PASS",
+   "actual": "PASS",
+   "ok": true,
+   "false_pass": false,
+   "false_block": false,
+   "blockers": []
+  },
+  {
+   "id": "N03",
+   "kind": "valid_code_idioms",
+   "expected": "PASS",
+   "actual": "PASS",
+   "ok": true,
+   "false_pass": false,
+   "false_block": false,
+   "blockers": []
+  },
+  {
+   "id": "N04",
+   "kind": "defect_boundary",
+   "expected": "CHANGES_REQUIRED",
+   "actual": "CHANGES_REQUIRED",
+   "ok": true,
+   "false_pass": false,
+   "false_block": false,
+   "blockers": [
+    [
+     "boundary_mismatch",
+     "R2",
+     "spec"
+    ],
+    [
+     "boundary_mismatch",
+     "R2",
+     "workflow"
+    ]
+   ]
+  },
+  {
+   "id": "N05",
+   "kind": "defect_precedence",
+   "expected": "CHANGES_REQUIRED",
+   "actual": "CHANGES_REQUIRED",
+   "ok": true,
+   "false_pass": false,
+   "false_block": false,
+   "blockers": [
+    [
+     "precedence_error",
+     "R2",
+     "spec"
+    ],
+    [
+     "precedence_error",
+     "R2",
+     "workflow"
+    ],
+    [
+     "precedence_error",
+     "R2",
+     "code:code1"
+    ]
+   ]
+  },
+  {
+   "id": "N06",
+   "kind": "defect_wrong_branch",
+   "expected": "CHANGES_REQUIRED",
+   "actual": "CHANGES_REQUIRED",
+   "ok": true,
+   "false_pass": false,
+   "false_block": false,
+   "blockers": [
+    [
+     "wrong_destination",
+     "R2",
+     "workflow"
+    ]
+   ]
+  },
+  {
+   "id": "N07",
+   "kind": "defect_code_only",
+   "expected": "CHANGES_REQUIRED",
+   "actual": "CHANGES_REQUIRED",
+   "ok": true,
+   "false_pass": false,
+   "false_block": false,
+   "blockers": [
+    [
+     "changed_threshold",
+     "R2",
+     "code:code1"
+    ]
+   ]
+  },
+  {
+   "id": "N08",
+   "kind": "approved_change_applied",
+   "expected": "PASS",
+   "actual": "PASS",
+   "ok": true,
+   "false_pass": false,
+   "false_block": false,
+   "blockers": []
+  },
+  {
+   "id": "N09",
+   "kind": "approved_change_not_applied",
+   "expected": "CHANGES_REQUIRED",
+   "actual": "CHANGES_REQUIRED",
+   "ok": true,
+   "false_pass": false,
+   "false_block": false,
+   "blockers": [
+    [
+     "changed_threshold",
+     "R2",
+     "spec"
+    ],
+    [
+     "changed_threshold",
+     "R2",
+     "workflow"
+    ],
+    [
+     "changed_threshold",
+     "R2",
+     "code:code1"
+    ]
+   ]
+  },
+  {
+   "id": "N10",
+   "kind": "unapproved_change_applied",
+   "expected": "CHANGES_REQUIRED",
+   "actual": "CHANGES_REQUIRED",
+   "ok": true,
+   "false_pass": false,
+   "false_block": false,
+   "blockers": [
+    [
+     "changed_threshold",
+     "R2",
+     "spec"
+    ],
+    [
+     "changed_threshold",
+     "R2",
+     "workflow"
+    ],
+    [
+     "changed_threshold",
+     "R2",
+     "code:code1"
+    ]
+   ]
+  },
+  {
+   "id": "N11",
+   "kind": "approval_conflict",
+   "expected": "INCOMPLETE",
+   "actual": "INCOMPLETE",
+   "ok": true,
+   "false_pass": false,
+   "false_block": false,
+   "blockers": []
+  },
+  {
+   "id": "N12",
+   "kind": "omitted_requirement",
+   "expected": "CHANGES_REQUIRED",
+   "actual": "CHANGES_REQUIRED",
+   "ok": true,
+   "false_pass": false,
+   "false_block": false,
+   "blockers": [
+    [
+     "omitted_requirement",
+     "R3",
+     "spec"
+    ],
+    [
+     "omitted_requirement",
+     "R3",
+     "workflow"
+    ],
+    [
+     "omitted_requirement",
+     "R3",
+     "code:code1"
+    ]
+   ]
+  },
+  {
+   "id": "N13",
+   "kind": "defect_unit",
+   "expected": "CHANGES_REQUIRED",
+   "actual": "CHANGES_REQUIRED",
+   "ok": true,
+   "false_pass": false,
+   "false_block": false,
+   "blockers": [
+    [
+     "unit_mismatch",
+     "R3",
+     "spec"
+    ],
+    [
+     "unit_mismatch",
+     "R3",
+     "workflow"
+    ]
+   ]
+  },
+  {
+   "id": "N14",
+   "kind": "unsupported_requirement",
+   "expected": "INCOMPLETE",
+   "actual": "INCOMPLETE",
+   "ok": true,
+   "false_pass": false,
+   "false_block": false,
+   "blockers": []
+  },
+  {
+   "id": "N15",
+   "kind": "revocation_restores_base",
+   "expected": "PASS",
+   "actual": "PASS",
+   "ok": true,
+   "false_pass": false,
+   "false_block": false,
+   "blockers": []
+  },
+  {
+   "id": "N16",
+   "kind": "revoked_but_spec_keeps_change",
+   "expected": "CHANGES_REQUIRED",
+   "actual": "CHANGES_REQUIRED",
+   "ok": true,
+   "false_pass": false,
+   "false_block": false,
+   "blockers": [
+    [
+     "changed_threshold",
+     "R2",
+     "spec"
+    ],
+    [
+     "changed_threshold",
+     "R2",
+     "workflow"
+    ],
+    [
+     "changed_threshold",
+     "R2",
+     "code:code1"
+    ]
+   ]
+  },
+  {
+   "id": "N17",
+   "kind": "injected_instruction",
+   "expected": "PASS",
+   "actual": "PASS",
+   "ok": true,
+   "false_pass": false,
+   "false_block": false,
+   "blockers": []
+  },
+  {
+   "id": "N19",
+   "kind": "defect_negation_on_missing",
+   "expected": "CHANGES_REQUIRED",
+   "actual": "CHANGES_REQUIRED",
+   "ok": true,
+   "false_pass": false,
+   "false_block": false,
+   "blockers": [
+    [
+     "boundary_mismatch",
+     "R2",
+     "spec"
+    ],
+    [
+     "boundary_mismatch",
+     "R2",
+     "workflow"
+    ]
+   ]
+  },
+  {
+   "id": "N18",
+   "kind": "code_crash_on_missing",
+   "expected": "CHANGES_REQUIRED",
+   "actual": "CHANGES_REQUIRED",
+   "ok": true,
+   "false_pass": false,
+   "false_block": false,
+   "blockers": [
+    [
+     "runtime_error",
+     "RD",
+     "code:code1"
+    ]
+   ]
+  }
+ ],
+ "note": "generalisation check on a second policy family; written after the reviewer; not tuned on; not part of the frozen benchmark"
+}

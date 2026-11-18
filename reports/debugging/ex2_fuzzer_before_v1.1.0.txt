@@ -1,0 +1,13 @@
+{"n": 400, "agree": 397, "false_pass": 0, "false_block": 3, "incomplete": 0, "crash": 0, "truly_defective": 246}
+(159, 'FALSE_BLOCK')
+(166, 'FALSE_BLOCK')
+(260, 'FALSE_BLOCK')
+case 159: reviewer counterexample {'category': '__other__', 'urgent': 0.0, 'waiting': 4.0, 'tier': '__other__'}
+   independent evaluator: requirements -> normal_queue, spec -> priority_queue  => REAL difference
+   ticket in fuzzer's TICKETS grid (before fix)? False
+case 166: reviewer counterexample {'category': 'billing', 'urgent': 0.0, 'waiting': 25.0, 'tier': '__other__'}
+   independent evaluator: requirements -> escalation, spec -> manual_review  => REAL difference
+   ticket in fuzzer's TICKETS grid (before fix)? False
+case 260: reviewer counterexample {'category': '__other__', 'urgent': 0.0, 'waiting': 30.0, 'tier': '__other__'}
+   independent evaluator: requirements -> normal_queue, spec -> manual_review  => REAL difference
+   ticket in fuzzer's TICKETS grid (before fix)? False

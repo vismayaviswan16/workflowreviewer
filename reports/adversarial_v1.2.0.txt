@@ -1,0 +1,37 @@
+V01 baseline                               -> PASS              exp=PASS OK  [] 0.00s
+spec extra rule (unexpected)               -> CHANGES_REQUIRED  exp=CHANGES_REQUIRED OK  [('blocker', 'changed_condition', 'R1')] 0.00s
+wrong source_ref, same behavior            -> PASS              exp=None OK  [('warning', 'dangling_source_ref', None)] 0.00s
+approval unknown target                    -> INCOMPLETE        exp=INCOMPLETE OK  [] 0.00s
+approved route change not propagated       -> CHANGES_REQUIRED  exp=CHANGES_REQUIRED OK  [('blocker', 'wrong_destination', 'R3'), ('blocker', 'wrong_destination', 'R3'), ('blocker', 'wrong_destination', 'R3')] 0.00s
+supersede A1->A2 (25) vs spec 30           -> CHANGES_REQUIRED  exp=CHANGES_REQUIRED OK  [('blocker', 'changed_threshold', 'R3'), ('blocker', 'changed_threshold', 'R3'), ('blocker', 'changed_threshold', 'R3')] 0.00s
+revocation record (revoke A1)              -> PASS              exp=PASS OK  [] 0.00s
+revocation w/o payload                     -> PASS              exp=PASS OK  [] 0.00s
+spec unit declared seconds (explicit `min` wins) -> PASS              exp=PASS OK  [] 0.00s
+integer field: >29.5 == >=30 (valid)       -> PASS              exp=PASS OK  [] 0.00s
+integer field: >29 == >=30 (valid)         -> PASS              exp=PASS OK  [] 0.00s
+de Morgan urgent (valid)                   -> PASS              exp=PASS OK  [] 0.00s
+redundant bound (valid)                    -> PASS              exp=PASS OK  [] 0.00s
+grid blowup 14 numeric fields              -> INCOMPLETE        exp=None OK  [] 0.00s
+review_config grid_cap string              -> PASS              exp=None OK  [] 0.00s
+review_config huge grid_cap                -> PASS              exp=None OK  [] 0.00s
+empty requirements                         -> INCOMPLETE        exp=INCOMPLETE OK  [('warning', 'dangling_source_ref', None), ('warning', 'dangling_source_ref', None), ('warning', 'dangling_source_ref', None)] 0.00s
+only default req                           -> CHANGES_REQUIRED  exp=CHANGES_REQUIRED OK  [('warning', 'dangling_source_ref', None), ('warning', 'dangling_source_ref', None), ('warning', 'dangling_source_ref', None)] 0.00s
+no artifacts                               -> INCOMPLETE        exp=INCOMPLETE OK  [] 0.00s
+spec+code but no workflow                  -> INCOMPLETE        exp=INCOMPLETE OK  [] 0.00s
+bundle is list                             -> INCOMPLETE        exp=INCOMPLETE OK  [] 0.00s
+bundle is None                             -> INCOMPLETE        exp=None OK  [] 0.00s
+injection in req text                      -> INCOMPLETE        exp=INCOMPLETE OK  [('major', 'unsupported_requirement', 'R3'), ('warning', 'unexpected_rule', None), ('warning', 'unexpected_rule', None)] 0.00s
+injection in docstring                     -> PASS              exp=PASS OK  [] 0.00s
+code with local var (unsupported)          -> INCOMPLETE        exp=INCOMPLETE OK  [] 0.00s
+code >29 on integer (valid)                -> PASS              exp=PASS OK  [] 0.00s
+duplicate req id                           -> INCOMPLETE        exp=INCOMPLETE OK  [] 0.00s
+workflow cycle                             -> CHANGES_REQUIRED  exp=CHANGES_REQUIRED OK  [('warning', 'unreachable_node', None), ('blocker', 'workflow_cycle', None)] 0.00s
+unreachable node (warn only)               -> PASS              exp=PASS OK  [('warning', 'unreachable_node', None)] 0.00s
+one workflow node stale version            -> INCOMPLETE        exp=INCOMPLETE OK  [] 0.00s
+approval scoped to other version           -> PASS              exp=PASS OK  [] 0.00s
+identical dup approvals                    -> CHANGES_REQUIRED  exp=None OK  [('blocker', 'changed_threshold', 'R3'), ('blocker', 'changed_threshold', 'R3')] 0.00s
+later seq no supersedes                    -> INCOMPLETE        exp=INCOMPLETE OK  [('major', 'approval_conflict', 'R3'), ('warning', 'unexpected_rule', None), ('warning', 'unexpected_rule', None)] 0.00s
+supersedes cycle (both vanish!)            -> INCOMPLETE        exp=INCOMPLETE OK  [('warning', 'unexpected_rule', None), ('warning', 'unexpected_rule', None), ('warning', 'unexpected_rule', None)] 0.05s
+supersedes unknown id                      -> INCOMPLETE        exp=None OK  [('warning', 'unexpected_rule', None), ('warning', 'unexpected_rule', None), ('warning', 'unexpected_rule', None)] 0.00s
+proposed supersedes approved               -> CHANGES_REQUIRED  exp=CHANGES_REQUIRED OK  [('blocker', 'changed_threshold', 'R3'), ('blocker', 'changed_threshold', 'R3'), ('blocker', 'changed_threshold', 'R3')] 0.00s
+cross-target supersedes kills A1           -> INCOMPLETE        exp=None OK  [('warning', 'unexpected_rule', None), ('warning', 'unexpected_rule', None), ('warning', 'unexpected_rule', None)] 0.00s

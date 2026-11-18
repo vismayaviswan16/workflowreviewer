@@ -1,0 +1,33 @@
+[
+ {
+  "kind": "valid",
+  "body": {
+   "overall_opinion": "PASS",
+   "findings": [
+    {
+     "claim_type": "defect",
+     "rule_ref": "R99",
+     "evidence_ids": [
+      "E999"
+     ],
+     "summary": "invented rule",
+     "correction": "n/a"
+    },
+    {
+     "claim_type": "ok",
+     "rule_ref": "R1",
+     "evidence_ids": [],
+     "summary": "everything is fine",
+     "correction": ""
+    },
+    {
+     "claim_type": "defect",
+     "rule_ref": "R1",
+     "evidence_ids": [],
+     "summary": "R1 is wrong",
+     "correction": "n/a"
+    }
+   ]
+  }
+ }
+]

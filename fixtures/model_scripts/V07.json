@@ -1,0 +1,7 @@
+[
+ {
+  "kind": "raw",
+  "text": "{\"findings\": [{\"claim_type\": \"concern\", \"rule_ref\": \"R3\", \"summary\": \"thres",
+  "finish_reason": "length"
+ }
+]

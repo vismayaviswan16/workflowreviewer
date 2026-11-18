@@ -1,0 +1,268 @@
+{
+ "impl": "v0",
+ "split": "all",
+ "ablation": "none",
+ "client": "fake (scripted, offline)",
+ "n_cases": 27,
+ "metrics": {
+  "decision": {
+   "valid": {
+    "n": 7,
+    "pass_": 3,
+    "false_block": 4,
+    "incomplete": 0
+   },
+   "defective": {
+    "n": 14,
+    "changes": 6,
+    "false_pass": 8,
+    "incomplete": 0
+   },
+   "incomplete": {
+    "n": 6,
+    "correct": 0,
+    "unsafe_pass": 6,
+    "blocked": 0
+   }
+  },
+  "confusion_expected_to_actual": {
+   "CHANGES_REQUIRED": {
+    "CHANGES_REQUIRED": 6,
+    "PASS": 8
+   },
+   "INCOMPLETE": {
+    "PASS": 6
+   },
+   "PASS": {
+    "PASS": 3,
+    "CHANGES_REQUIRED": 4
+   }
+  },
+  "finding_quality": {
+   "expected_defects": 14,
+   "found_correct": 1,
+   "with_verified_evidence": 1,
+   "with_oracle_valid_counterexample": 0,
+   "counterexamples_checked": 0,
+   "unsupported_blockers": 16,
+   "total_blockers": 17,
+   "model_only_advisories": 0
+  },
+  "resource": {
+   "calls": 0,
+   "retries": 0,
+   "runtime_s": 0.0033
+  }
+ },
+ "per_case": {
+  "D01": {
+   "expected": "CHANGES_REQUIRED",
+   "actual": "CHANGES_REQUIRED",
+   "correct": true,
+   "holdout": false,
+   "categories": [
+    "changed_threshold"
+   ]
+  },
+  "D02": {
+   "expected": "CHANGES_REQUIRED",
+   "actual": "PASS",
+   "correct": false,
+   "holdout": false,
+   "categories": []
+  },
+  "D03": {
+   "expected": "CHANGES_REQUIRED",
+   "actual": "PASS",
+   "correct": false,
+   "holdout": false,
+   "categories": []
+  },
+  "D04": {
+   "expected": "CHANGES_REQUIRED",
+   "actual": "CHANGES_REQUIRED",
+   "correct": true,
+   "holdout": false,
+   "categories": [
+    "omitted_requirement"
+   ]
+  },
+  "D05": {
+   "expected": "CHANGES_REQUIRED",
+   "actual": "CHANGES_REQUIRED",
+   "correct": true,
+   "holdout": false,
+   "categories": [
+    "changed_threshold"
+   ]
+  },
+  "D06": {
+   "expected": "CHANGES_REQUIRED",
+   "actual": "PASS",
+   "correct": false,
+   "holdout": false,
+   "categories": []
+  },
+  "D07": {
+   "expected": "CHANGES_REQUIRED",
+   "actual": "PASS",
+   "correct": false,
+   "holdout": true,
+   "categories": []
+  },
+  "D08": {
+   "expected": "CHANGES_REQUIRED",
+   "actual": "PASS",
+   "correct": false,
+   "holdout": true,
+   "categories": []
+  },
+  "D09": {
+   "expected": "CHANGES_REQUIRED",
+   "actual": "PASS",
+   "correct": false,
+   "holdout": false,
+   "categories": []
+  },
+  "D10": {
+   "expected": "CHANGES_REQUIRED",
+   "actual": "PASS",
+   "correct": false,
+   "holdout": false,
+   "categories": []
+  },
+  "D11": {
+   "expected": "CHANGES_REQUIRED",
+   "actual": "CHANGES_REQUIRED",
+   "correct": true,
+   "holdout": false,
+   "categories": [
+    "changed_threshold"
+   ]
+  },
+  "D12": {
+   "expected": "CHANGES_REQUIRED",
+   "actual": "CHANGES_REQUIRED",
+   "correct": true,
+   "holdout": true,
+   "categories": [
+    "omitted_requirement"
+   ]
+  },
+  "D13": {
+   "expected": "CHANGES_REQUIRED",
+   "actual": "PASS",
+   "correct": false,
+   "holdout": false,
+   "categories": []
+  },
+  "D14": {
+   "expected": "CHANGES_REQUIRED",
+   "actual": "CHANGES_REQUIRED",
+   "correct": true,
+   "holdout": false,
+   "categories": [
+    "changed_threshold"
+   ]
+  },
+  "I01": {
+   "expected": "INCOMPLETE",
+   "actual": "PASS",
+   "correct": false,
+   "holdout": true,
+   "categories": []
+  },
+  "I02": {
+   "expected": "INCOMPLETE",
+   "actual": "PASS",
+   "correct": false,
+   "holdout": false,
+   "categories": []
+  },
+  "I03": {
+   "expected": "INCOMPLETE",
+   "actual": "PASS",
+   "correct": false,
+   "holdout": false,
+   "categories": []
+  },
+  "I04": {
+   "expected": "INCOMPLETE",
+   "actual": "PASS",
+   "correct": false,
+   "holdout": false,
+   "categories": []
+  },
+  "I05": {
+   "expected": "INCOMPLETE",
+   "actual": "PASS",
+   "correct": false,
+   "holdout": false,
+   "categories": []
+  },
+  "I06": {
+   "expected": "INCOMPLETE",
+   "actual": "PASS",
+   "correct": false,
+   "holdout": false,
+   "categories": []
+  },
+  "V01": {
+   "expected": "PASS",
+   "actual": "PASS",
+   "correct": true,
+   "holdout": false,
+   "categories": []
+  },
+  "V02": {
+   "expected": "PASS",
+   "actual": "CHANGES_REQUIRED",
+   "correct": false,
+   "holdout": false,
+   "categories": [
+    "changed_threshold"
+   ]
+  },
+  "V03": {
+   "expected": "PASS",
+   "actual": "CHANGES_REQUIRED",
+   "correct": false,
+   "holdout": true,
+   "categories": [
+    "changed_threshold"
+   ]
+  },
+  "V04": {
+   "expected": "PASS",
+   "actual": "PASS",
+   "correct": true,
+   "holdout": false,
+   "categories": []
+  },
+  "V05": {
+   "expected": "PASS",
+   "actual": "CHANGES_REQUIRED",
+   "correct": false,
+   "holdout": false,
+   "categories": [
+    "omitted_requirement"
+   ]
+  },
+  "V06": {
+   "expected": "PASS",
+   "actual": "CHANGES_REQUIRED",
+   "correct": false,
+   "holdout": false,
+   "categories": [
+    "omitted_requirement"
+   ]
+  },
+  "V07": {
+   "expected": "PASS",
+   "actual": "PASS",
+   "correct": true,
+   "holdout": false,
+   "categories": []
+  }
+ }
+}

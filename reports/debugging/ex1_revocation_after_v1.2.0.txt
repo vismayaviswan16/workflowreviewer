@@ -1,0 +1,2 @@
+revocation record (revoke A1)              -> PASS              exp=PASS OK   0.01s
+revocation w/o payload                     -> PASS              exp=PASS OK   0.00s

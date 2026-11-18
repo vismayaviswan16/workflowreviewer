@@ -1,0 +1,163 @@
+{
+ "deliberate_fault_injection": true,
+ "mutants": 16,
+ "applied": 16,
+ "killed": 16,
+ "survived": [],
+ "not_applied": [],
+ "detail": [
+  {
+   "id": "M01",
+   "description": "proposed (unapproved) approvals are honoured",
+   "file": "reviewer/effective.py",
+   "result": "KILLED",
+   "killed_by": [
+    "unit_tests",
+    "frozen_benchmark"
+   ]
+  },
+  {
+   "id": "M02",
+   "description": "approval scope ignored",
+   "file": "reviewer/effective.py",
+   "result": "KILLED",
+   "killed_by": [
+    "unit_tests",
+    "frozen_benchmark"
+   ]
+  },
+  {
+   "id": "M03",
+   "description": "conflicting approvals not detected",
+   "file": "reviewer/effective.py",
+   "result": "KILLED",
+   "killed_by": [
+    "unit_tests",
+    "frozen_benchmark"
+   ]
+  },
+  {
+   "id": "M04",
+   "description": "INCOMPLETE never reported (always PASS)",
+   "file": "reviewer/review.py",
+   "result": "KILLED",
+   "killed_by": [
+    "unit_tests",
+    "frozen_benchmark"
+   ]
+  },
+  {
+   "id": "M05",
+   "description": "version mismatch ignored",
+   "file": "reviewer/review.py",
+   "result": "KILLED",
+   "killed_by": [
+    "unit_tests",
+    "frozen_benchmark"
+   ]
+  },
+  {
+   "id": "M06",
+   "description": "minutes treated as seconds",
+   "file": "reviewer/lang.py",
+   "result": "KILLED",
+   "killed_by": [
+    "unit_tests",
+    "frozen_benchmark"
+   ]
+  },
+  {
+   "id": "M07",
+   "description": "None != c not modelled in lifted Python",
+   "file": "reviewer/pysubset.py",
+   "result": "KILLED",
+   "killed_by": [
+    "unit_tests"
+   ]
+  },
+  {
+   "id": "M08",
+   "description": "unguarded ordering on None no longer a crash",
+   "file": "reviewer/pysubset.py",
+   "result": "KILLED",
+   "killed_by": [
+    "unit_tests",
+    "frozen_benchmark"
+   ]
+  },
+  {
+   "id": "M09",
+   "description": "invented model rule refs accepted",
+   "file": "reviewer/model/advisor.py",
+   "result": "KILLED",
+   "killed_by": [
+    "unit_tests"
+   ]
+  },
+  {
+   "id": "M10",
+   "description": "cache key ignores bundle content (stale PASS)",
+   "file": "reviewer/review.py",
+   "result": "KILLED",
+   "killed_by": [
+    "unit_tests"
+   ]
+  },
+  {
+   "id": "M11",
+   "description": "revocation event ignored",
+   "file": "reviewer/effective.py",
+   "result": "KILLED",
+   "killed_by": [
+    "unit_tests"
+   ]
+  },
+  {
+   "id": "M12",
+   "description": "sampled agreement allowed to count as equivalence",
+   "file": "reviewer/review.py",
+   "result": "KILLED",
+   "killed_by": [
+    "unit_tests",
+    "frozen_benchmark"
+   ]
+  },
+  {
+   "id": "M13",
+   "description": "`not in` lifted as `in`",
+   "file": "reviewer/pysubset.py",
+   "result": "KILLED",
+   "killed_by": [
+    "unit_tests"
+   ]
+  },
+  {
+   "id": "M14",
+   "description": "blocker status requires no verification",
+   "file": "reviewer/review.py",
+   "result": "KILLED",
+   "killed_by": [
+    "unit_tests",
+    "frozen_benchmark"
+   ]
+  },
+  {
+   "id": "M15",
+   "description": "config in bundle may relax operator policy",
+   "file": "reviewer/review.py",
+   "result": "KILLED",
+   "killed_by": [
+    "unit_tests"
+   ]
+  },
+  {
+   "id": "M16",
+   "description": "ternary else-branch dropped",
+   "file": "reviewer/pysubset.py",
+   "result": "KILLED",
+   "killed_by": [
+    "unit_tests"
+   ]
+  }
+ ]
+}

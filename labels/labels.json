@@ -1,0 +1,363 @@
+{
+ "labels": {
+  "V01": {
+   "type": "valid",
+   "expected_status": "PASS",
+   "expected_findings": [],
+   "holdout": false,
+   "notes": "baseline, all artifacts agree",
+   "oracle": true
+  },
+  "V02": {
+   "type": "valid",
+   "expected_status": "PASS",
+   "expected_findings": [],
+   "holdout": false,
+   "notes": "approved 30->25 applied everywhere; proposed (A2) and out-of-scope (A0) records ignored",
+   "oracle": true
+  },
+  "V03": {
+   "type": "valid",
+   "expected_status": "PASS",
+   "expected_findings": [],
+   "holdout": true,
+   "notes": "unusual but equivalent formulation: NOT/OR, seconds, reordered exclusions, chained workflow",
+   "oracle": true
+  },
+  "V04": {
+   "type": "valid",
+   "expected_status": "PASS",
+   "expected_findings": [],
+   "holdout": false,
+   "notes": "unapproved suggestion + prose approval claim must not change the threshold",
+   "oracle": true
+  },
+  "V05": {
+   "type": "valid",
+   "expected_status": "PASS",
+   "expected_findings": [],
+   "holdout": false,
+   "notes": "rename/reorder/paraphrase variant of V01 (pair with D01)",
+   "oracle": true
+  },
+  "V06": {
+   "type": "valid",
+   "expected_status": "PASS",
+   "expected_findings": [],
+   "holdout": false,
+   "notes": "rename/reorder variant of V03",
+   "oracle": true
+  },
+  "V07": {
+   "type": "valid",
+   "expected_status": "PASS",
+   "expected_findings": [],
+   "holdout": false,
+   "notes": "model returns truncated JSON; model is advisory so deterministic PASS stands, failure disclosed",
+   "oracle": true
+  },
+  "D01": {
+   "type": "defective",
+   "expected_status": "CHANGES_REQUIRED",
+   "expected_findings": [
+    {
+     "categories": [
+      "changed_threshold"
+     ],
+     "artifact": "spec",
+     "rule_ref": "R3",
+     "location_contains": "rules[2]"
+    }
+   ],
+   "holdout": false,
+   "notes": "spec threshold 35",
+   "oracle": true
+  },
+  "D02": {
+   "type": "defective",
+   "expected_status": "CHANGES_REQUIRED",
+   "expected_findings": [
+    {
+     "categories": [
+      "boundary_mismatch"
+     ],
+     "artifact": "spec",
+     "rule_ref": "R3",
+     "location_contains": "rules[2]"
+    }
+   ],
+   "holdout": false,
+   "notes": "waiting > 30",
+   "oracle": true
+  },
+  "D03": {
+   "type": "defective",
+   "expected_status": "CHANGES_REQUIRED",
+   "expected_findings": [
+    {
+     "categories": [
+      "precedence_error"
+     ],
+     "artifact": "spec",
+     "rule_ref": "R1",
+     "location_contains": "rules[0]"
+    }
+   ],
+   "holdout": false,
+   "notes": "R2 before R1",
+   "oracle": true
+  },
+  "D04": {
+   "type": "defective",
+   "expected_status": "CHANGES_REQUIRED",
+   "expected_findings": [
+    {
+     "categories": [
+      "omitted_requirement"
+     ],
+     "artifact": "spec",
+     "rule_ref": "R1",
+     "location_contains": ""
+    }
+   ],
+   "holdout": false,
+   "notes": "spec omits missing-category rule",
+   "oracle": true
+  },
+  "D05": {
+   "type": "defective",
+   "expected_status": "CHANGES_REQUIRED",
+   "expected_findings": [
+    {
+     "categories": [
+      "changed_threshold"
+     ],
+     "artifact": "spec",
+     "rule_ref": "R3",
+     "location_contains": "rules[2]"
+    }
+   ],
+   "holdout": false,
+   "notes": "approved 25 not propagated to spec",
+   "oracle": true
+  },
+  "D06": {
+   "type": "defective",
+   "expected_status": "CHANGES_REQUIRED",
+   "expected_findings": [
+    {
+     "categories": [
+      "wrong_destination"
+     ],
+     "artifact": "workflow",
+     "rule_ref": "R3",
+     "location_contains": "n1"
+    }
+   ],
+   "holdout": false,
+   "notes": "escalation branch -> normal queue",
+   "oracle": true
+  },
+  "D07": {
+   "type": "defective",
+   "expected_status": "CHANGES_REQUIRED",
+   "expected_findings": [
+    {
+     "categories": [
+      "boundary_mismatch"
+     ],
+     "artifact": "code",
+     "rule_ref": "R3",
+     "location_contains": "line"
+    }
+   ],
+   "holdout": true,
+   "notes": "code uses > despite correct metadata",
+   "oracle": true
+  },
+  "D08": {
+   "type": "defective",
+   "expected_status": "CHANGES_REQUIRED",
+   "expected_findings": [
+    {
+     "categories": [
+      "precedence_error"
+     ],
+     "artifact": "spec",
+     "rule_ref": "R1",
+     "location_contains": "rules[0]"
+    }
+   ],
+   "holdout": true,
+   "notes": "vip exception before missing-category rule (each rule plausible alone)",
+   "oracle": true
+  },
+  "D09": {
+   "type": "defective",
+   "expected_status": "CHANGES_REQUIRED",
+   "expected_findings": [
+    {
+     "categories": [
+      "missing_branch"
+     ],
+     "artifact": "workflow",
+     "rule_ref": "RD",
+     "location_contains": "n1"
+    }
+   ],
+   "holdout": false,
+   "notes": "no else branch",
+   "oracle": true
+  },
+  "D10": {
+   "type": "defective",
+   "expected_status": "CHANGES_REQUIRED",
+   "expected_findings": [
+    {
+     "categories": [
+      "unit_mismatch"
+     ],
+     "artifact": "spec",
+     "rule_ref": "R3",
+     "location_contains": "rules[2]"
+    }
+   ],
+   "holdout": false,
+   "notes": "unitless 30 declared as seconds",
+   "oracle": true
+  },
+  "D11": {
+   "type": "defective",
+   "expected_status": "CHANGES_REQUIRED",
+   "expected_findings": [
+    {
+     "categories": [
+      "changed_threshold"
+     ],
+     "artifact": "spec",
+     "rule_ref": "R3",
+     "location_contains": "rules[2]"
+    }
+   ],
+   "holdout": false,
+   "notes": "injected instructions + threshold 35",
+   "oracle": true
+  },
+  "D12": {
+   "type": "defective",
+   "expected_status": "CHANGES_REQUIRED",
+   "expected_findings": [
+    {
+     "categories": [
+      "changed_threshold"
+     ],
+     "artifact": "spec",
+     "rule_ref": "REQ-C",
+     "location_contains": "rules[2]"
+    }
+   ],
+   "holdout": true,
+   "notes": "rename/paraphrase variant of D01; defect must persist",
+   "oracle": true
+  },
+  "D13": {
+   "type": "defective",
+   "expected_status": "CHANGES_REQUIRED",
+   "expected_findings": [
+    {
+     "categories": [
+      "runtime_error"
+     ],
+     "artifact": "code",
+     "rule_ref": "RD",
+     "location_contains": "line"
+    }
+   ],
+   "holdout": false,
+   "notes": "unguarded comparison crashes when waiting missing",
+   "oracle": true
+  },
+  "D14": {
+   "type": "defective",
+   "expected_status": "CHANGES_REQUIRED",
+   "expected_findings": [
+    {
+     "categories": [
+      "changed_threshold"
+     ],
+     "artifact": "spec",
+     "rule_ref": "R3",
+     "location_contains": "rules[2]"
+    }
+   ],
+   "holdout": false,
+   "notes": "threshold 35 + model invents refs, conflicts, says PASS",
+   "oracle": true
+  },
+  "I01": {
+   "type": "incomplete",
+   "expected_status": "INCOMPLETE",
+   "expected_findings": [],
+   "holdout": true,
+   "notes": "two approved, unordered records for R3 (25 vs 20)",
+   "oracle": false
+  },
+  "I02": {
+   "type": "incomplete",
+   "expected_status": "INCOMPLETE",
+   "expected_findings": [],
+   "holdout": false,
+   "notes": "requirement outside supported language must stay visible",
+   "oracle": false
+  },
+  "I03": {
+   "type": "incomplete",
+   "expected_status": "INCOMPLETE",
+   "expected_findings": [],
+   "holdout": false,
+   "notes": "snippet outside restricted Python subset",
+   "oracle": false
+  },
+  "I04": {
+   "type": "incomplete",
+   "expected_status": "INCOMPLETE",
+   "expected_findings": [],
+   "holdout": false,
+   "notes": "model required; every call times out",
+   "oracle": false
+  },
+  "I05": {
+   "type": "incomplete",
+   "expected_status": "INCOMPLETE",
+   "expected_findings": [],
+   "holdout": false,
+   "notes": "grid cap forces sampled equivalence; sampled cannot pass",
+   "oracle": false
+  },
+  "I06": {
+   "type": "incomplete",
+   "expected_status": "INCOMPLETE",
+   "expected_findings": [],
+   "holdout": false,
+   "notes": "workflow version differs from the version under review",
+   "oracle": false
+  }
+ },
+ "pairs": {
+  "V01": [
+   "D01",
+   "V05",
+   "D12"
+  ],
+  "V03": [
+   "V06"
+  ]
+ },
+ "holdout": [
+  "V03",
+  "D07",
+  "D08",
+  "D12",
+  "I01"
+ ]
+}

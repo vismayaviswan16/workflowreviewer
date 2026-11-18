@@ -1,0 +1,2 @@
+revocation record (revoke A1)              -> CHANGES_REQUIRED  exp=PASS <<< MISMATCH  0.00s
+revocation w/o payload                     -> INCOMPLETE        exp=PASS <<< MISMATCH  0.00s

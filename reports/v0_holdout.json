@@ -1,0 +1,97 @@
+{
+ "impl": "v0",
+ "split": "holdout",
+ "ablation": "none",
+ "client": "fake (scripted, offline)",
+ "n_cases": 5,
+ "metrics": {
+  "decision": {
+   "valid": {
+    "n": 1,
+    "pass_": 0,
+    "false_block": 1,
+    "incomplete": 0
+   },
+   "defective": {
+    "n": 3,
+    "changes": 1,
+    "false_pass": 2,
+    "incomplete": 0
+   },
+   "incomplete": {
+    "n": 1,
+    "correct": 0,
+    "unsafe_pass": 1,
+    "blocked": 0
+   }
+  },
+  "confusion_expected_to_actual": {
+   "CHANGES_REQUIRED": {
+    "PASS": 2,
+    "CHANGES_REQUIRED": 1
+   },
+   "INCOMPLETE": {
+    "PASS": 1
+   },
+   "PASS": {
+    "CHANGES_REQUIRED": 1
+   }
+  },
+  "finding_quality": {
+   "expected_defects": 3,
+   "found_correct": 0,
+   "with_verified_evidence": 0,
+   "with_oracle_valid_counterexample": 0,
+   "counterexamples_checked": 0,
+   "unsupported_blockers": 4,
+   "total_blockers": 4,
+   "model_only_advisories": 0
+  },
+  "resource": {
+   "calls": 0,
+   "retries": 0,
+   "runtime_s": 0.0005
+  }
+ },
+ "per_case": {
+  "D07": {
+   "expected": "CHANGES_REQUIRED",
+   "actual": "PASS",
+   "correct": false,
+   "holdout": true,
+   "categories": []
+  },
+  "D08": {
+   "expected": "CHANGES_REQUIRED",
+   "actual": "PASS",
+   "correct": false,
+   "holdout": true,
+   "categories": []
+  },
+  "D12": {
+   "expected": "CHANGES_REQUIRED",
+   "actual": "CHANGES_REQUIRED",
+   "correct": true,
+   "holdout": true,
+   "categories": [
+    "omitted_requirement"
+   ]
+  },
+  "I01": {
+   "expected": "INCOMPLETE",
+   "actual": "PASS",
+   "correct": false,
+   "holdout": true,
+   "categories": []
+  },
+  "V03": {
+   "expected": "PASS",
+   "actual": "CHANGES_REQUIRED",
+   "correct": false,
+   "holdout": true,
+   "categories": [
+    "changed_threshold"
+   ]
+  }
+ }
+}

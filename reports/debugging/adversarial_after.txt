@@ -1,0 +1,38 @@
+# SUPERSEDED: this is the output as received (v1.1.0). Its 3 MISMATCH rows are explained in DEBUGGING.md and are gone in ../adversarial_v1.2.0.txt (0 mismatches).
+V01 baseline                               -> PASS              exp=PASS OK  [] 0.00s
+spec extra rule (unexpected)               -> CHANGES_REQUIRED  exp=CHANGES_REQUIRED OK  [('blocker', 'precedence_error'
+wrong source_ref, same behavior            -> PASS              exp=None OK  [('warning', 'dangling_source_ref', None)] 
+approval unknown target                    -> INCOMPLETE        exp=INCOMPLETE OK  [] 0.00s
+approved route change not propagated       -> CHANGES_REQUIRED  exp=CHANGES_REQUIRED OK  [('blocker', 'wrong_destination
+supersede A1->A2 (25) vs spec 30           -> CHANGES_REQUIRED  exp=CHANGES_REQUIRED OK  [('blocker', 'changed_threshold
+revocation record (revoke A1)              -> CHANGES_REQUIRED  exp=PASS <<< MISMATCH [('blocker', 'changed_threshold', 
+revocation w/o payload                     -> INCOMPLETE        exp=PASS <<< MISMATCH [] 0.00s
+spec unit declared seconds                 -> PASS              exp=CHANGES_REQUIRED <<< MISMATCH [] 0.00s
+integer field: >29.5 == >=30 (valid)       -> PASS              exp=PASS OK  [] 0.00s
+integer field: >29 == >=30 (valid)         -> PASS              exp=PASS OK  [] 0.00s
+de Morgan urgent (valid)                   -> PASS              exp=PASS OK  [] 0.00s
+redundant bound (valid)                    -> PASS              exp=PASS OK  [] 0.00s
+grid blowup 14 numeric fields              -> INCOMPLETE        exp=None OK  [] 0.00s
+review_config grid_cap string              -> PASS              exp=None OK  [] 0.00s
+review_config huge grid_cap                -> PASS              exp=None OK  [] 0.00s
+empty requirements                         -> INCOMPLETE        exp=INCOMPLETE OK  [('warning', 'dangling_source_ref', N
+only default req                           -> CHANGES_REQUIRED  exp=CHANGES_REQUIRED OK  [('warning', 'dangling_source_r
+no artifacts                               -> INCOMPLETE        exp=INCOMPLETE OK  [] 0.00s
+spec+code but no workflow                  -> INCOMPLETE        exp=INCOMPLETE OK  [] 0.00s
+bundle is list                             -> INCOMPLETE        exp=INCOMPLETE OK  [] 0.00s
+bundle is None                             -> INCOMPLETE        exp=None OK  [] 0.00s
+injection in req text                      -> INCOMPLETE        exp=INCOMPLETE OK  [('major', 'unsupported_requirement',
+injection in docstring                     -> PASS              exp=PASS OK  [] 0.00s
+code with local var (unsupported)          -> INCOMPLETE        exp=INCOMPLETE OK  [] 0.00s
+code >29 on integer (valid)                -> PASS              exp=PASS OK  [] 0.00s
+duplicate req id                           -> INCOMPLETE        exp=INCOMPLETE OK  [] 0.00s
+workflow cycle                             -> CHANGES_REQUIRED  exp=CHANGES_REQUIRED OK  [('warning', 'unreachable_node'
+unreachable node (warn only)               -> PASS              exp=PASS OK  [('warning', 'unreachable_node', None)] 0.0
+one workflow node stale version            -> INCOMPLETE        exp=INCOMPLETE OK  [] 0.00s
+approval scoped to other version           -> PASS              exp=PASS OK  [] 0.00s
+identical dup approvals                    -> CHANGES_REQUIRED  exp=None OK  [('blocker', 'changed_threshold', 'R3'), ('
+later seq no supersedes                    -> INCOMPLETE        exp=INCOMPLETE OK  [('major', 'approval_conflict', 'R3')
+supersedes cycle (both vanish!)            -> INCOMPLETE        exp=INCOMPLETE OK  [('warning', 'unexpected_rule', None)
+supersedes unknown id                      -> INCOMPLETE        exp=None OK  [('warning', 'unexpected_rule', None), ('wa
+proposed supersedes approved               -> CHANGES_REQUIRED  exp=CHANGES_REQUIRED OK  [('blocker', 'changed_threshold
+cross-target supersedes kills A1           -> INCOMPLETE        exp=None OK  [('warning', 'unexpected_rule', None), ('wa

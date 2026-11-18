@@ -1,0 +1,145 @@
+{
+ "bundle_id": "D14",
+ "review_version": "v1",
+ "fields": {
+  "category": {
+   "type": "categorical"
+  },
+  "urgent": {
+   "type": "bool"
+  },
+  "waiting": {
+   "type": "number",
+   "unit": "min",
+   "integer": true,
+   "min": 0
+  }
+ },
+ "requirements": {
+  "id": "policy",
+  "version": "p1",
+  "units": {
+   "waiting": "min"
+  },
+  "items": [
+   {
+    "id": "R1",
+    "anchor": "policy.md#L3",
+    "order": 1,
+    "text": "IF category is missing THEN manual review"
+   },
+   {
+    "id": "R2",
+    "anchor": "policy.md#L4",
+    "order": 2,
+    "text": "IF urgent == true THEN priority queue"
+   },
+   {
+    "id": "R3",
+    "anchor": "policy.md#L5",
+    "order": 3,
+    "text": "IF waiting >= 30 minutes THEN escalation"
+   },
+   {
+    "id": "RD",
+    "anchor": "policy.md#L6",
+    "order": 4,
+    "text": "OTHERWISE normal queue"
+   }
+  ]
+ },
+ "approvals": [],
+ "spec": {
+  "id": "spec",
+  "version": "v1",
+  "units": {
+   "waiting": "min"
+  },
+  "rules": [
+   {
+    "id": "S1",
+    "source_ref": "R1",
+    "when": "category is missing",
+    "then": "manual_review"
+   },
+   {
+    "id": "S2",
+    "source_ref": "R2",
+    "when": "urgent == true",
+    "then": "priority_queue"
+   },
+   {
+    "id": "S3",
+    "source_ref": "R3",
+    "when": "waiting >= 35 min",
+    "then": "escalation"
+   }
+  ],
+  "default": "normal_queue"
+ },
+ "workflow": {
+  "id": "workflow",
+  "version": "v1",
+  "units": {
+   "waiting": "min"
+  },
+  "entry": "n1",
+  "nodes": [
+   {
+    "id": "n1",
+    "version": "v1",
+    "kind": "decision",
+    "branches": [
+     {
+      "when": "category is missing",
+      "to": "t_manual_review"
+     },
+     {
+      "when": "urgent == true",
+      "to": "t_priority_queue"
+     },
+     {
+      "when": "waiting >= 30 min",
+      "to": "t_escalation"
+     },
+     {
+      "when": "else",
+      "to": "t_normal_queue"
+     }
+    ]
+   },
+   {
+    "id": "t_manual_review",
+    "version": "v1",
+    "kind": "terminal",
+    "route": "manual_review"
+   },
+   {
+    "id": "t_priority_queue",
+    "version": "v1",
+    "kind": "terminal",
+    "route": "priority_queue"
+   },
+   {
+    "id": "t_escalation",
+    "version": "v1",
+    "kind": "terminal",
+    "route": "escalation"
+   },
+   {
+    "id": "t_normal_queue",
+    "version": "v1",
+    "kind": "terminal",
+    "route": "normal_queue"
+   }
+  ]
+ },
+ "snippets": [
+  {
+   "id": "code1",
+   "version": "v1",
+   "linked_node": "n1",
+   "source": "UNITS = {\"waiting\": \"min\"}\n\ndef route(ticket):\n    if ticket.get(\"category\") is None:\n        return \"manual_review\"\n    if ticket.get(\"urgent\"):\n        return \"priority_queue\"\n    if ticket.get(\"waiting\") is not None and ticket.get(\"waiting\") >= 30:\n        return \"escalation\"\n    return \"normal_queue\"\n"
+  }
+ ]
+}

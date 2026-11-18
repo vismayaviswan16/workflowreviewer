@@ -1,0 +1,214 @@
+{
+  "format_version": 1,
+  "description": "Frozen synthetic evaluation inputs, expected labels, split, generator provenance, baseline checkpoint, and the final implementation checkpoint (reviewer/, prompts/).",
+  "files": {
+    "baseline_v0/__init__.py": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "baseline_v0/reviewer_v0.py": {
+      "sha256": "ceaad7d5c7f2bcc6bc779c19255e703852f95bdb309eedc0a565fd1e78edce55",
+      "bytes": 2173
+    },
+    "fixtures/build_fixtures.py": {
+      "sha256": "d1a480d4eb45489092130b049ccedac3e5342d6454dff6ad77aceab54f0423a3",
+      "bytes": 12130
+    },
+    "fixtures/bundles/D01.json": {
+      "sha256": "3522c587dff6ad38b06c8ac2a4c5c26830d7a4f0660daeba0999a3eae83f9033",
+      "bytes": 2746
+    },
+    "fixtures/bundles/D02.json": {
+      "sha256": "61cd905f7ee013ce00c0ce3dde7f80156e7ce589e902c1bf902b1cb0208a4172",
+      "bytes": 2745
+    },
+    "fixtures/bundles/D03.json": {
+      "sha256": "bf9d4e492a6bae83c955c49e044ac3d7dcf40720ffbae5b7abbe9fc958eb8230",
+      "bytes": 2746
+    },
+    "fixtures/bundles/D04.json": {
+      "sha256": "5b89569483e664f7ddb408fb8d4f533d81c551dde80a40f7cb339c4099bdb0c0",
+      "bytes": 2632
+    },
+    "fixtures/bundles/D05.json": {
+      "sha256": "29052e6bce9499cbe560adfca3d1cdfbaa3f4f3b8a279fc77a105db53386ffb0",
+      "bytes": 3209
+    },
+    "fixtures/bundles/D06.json": {
+      "sha256": "a6d39770f5df88fe73d11b386828b2e54de3a89cd7dac4dc723dee7de6805387",
+      "bytes": 2748
+    },
+    "fixtures/bundles/D07.json": {
+      "sha256": "4e06ad8bf265b3d0d46a3670038f9e775c5ab32e3131ad60d401ac0567c3fca4",
+      "bytes": 2745
+    },
+    "fixtures/bundles/D08.json": {
+      "sha256": "da96f581117e6e3bda83b5b8ceb76adbae893ea39ed33635d038acd90ee0fc64",
+      "bytes": 3314
+    },
+    "fixtures/bundles/D09.json": {
+      "sha256": "6a98c9022a2e240dea138f7a8ab0e922b9796f5185b27407b2e2211b5a6218cc",
+      "bytes": 2680
+    },
+    "fixtures/bundles/D10.json": {
+      "sha256": "01d90f411e390ae72ff145209ca2ccb19206229f8c571fc8949f4d63aefe65a8",
+      "bytes": 2740
+    },
+    "fixtures/bundles/D11.json": {
+      "sha256": "a1cfd36f1755d2c4a04648d6313f09afd2935bb52049fdf51a98913124d11de1",
+      "bytes": 2923
+    },
+    "fixtures/bundles/D12.json": {
+      "sha256": "a4a2ee1ec02a2c885e0deea4899df1e1dace5ebe3af5c0d49839e61ef2442dac",
+      "bytes": 2760
+    },
+    "fixtures/bundles/D13.json": {
+      "sha256": "baae247a3bfe0ad1560ec9f8e388b34689c458ecab2a4628fe58d70a74ade20a",
+      "bytes": 2706
+    },
+    "fixtures/bundles/D14.json": {
+      "sha256": "2ea826f51742c07d34f4dd2d00646ff7615aea79d351085577d63a2883a4c396",
+      "bytes": 2746
+    },
+    "fixtures/bundles/I01.json": {
+      "sha256": "bb12c0fdd2bc44cf0975bd8495fcb1e4b53cd51bfd2e4afad4bc70c5c4ea29a8",
+      "bytes": 3055
+    },
+    "fixtures/bundles/I02.json": {
+      "sha256": "3f61d656a7ef1dde7a348dcc6f5bd464cf00e87e285d5d1859af916a41176679",
+      "bytes": 2891
+    },
+    "fixtures/bundles/I03.json": {
+      "sha256": "3784baa25aa87341ec3d765bf97436cbaaacbf5420c7051835456aa863bb93e5",
+      "bytes": 2631
+    },
+    "fixtures/bundles/I04.json": {
+      "sha256": "ecafd45f067bb1b93bf5abc04da9d168af78d0989be1684171c8ad7d0ecd0e22",
+      "bytes": 2794
+    },
+    "fixtures/bundles/I05.json": {
+      "sha256": "2a003ae85c7c4670b7bf04f9285bbc1c5b82cd74d697bf669b00ac1fc2e32c69",
+      "bytes": 2786
+    },
+    "fixtures/bundles/I06.json": {
+      "sha256": "9c4b48ec7fe73180977c63306d98f448154129b789a4ca3e2554a3c391e0da17",
+      "bytes": 2746
+    },
+    "fixtures/bundles/V01.json": {
+      "sha256": "c2a56c7e2f189cd397ee20fa707d979663e1e332b9cae4112460938e4e6c284b",
+      "bytes": 2746
+    },
+    "fixtures/bundles/V02.json": {
+      "sha256": "71a1b12a6c5c65ca4b3adc4f7282e7e992c79540cea811c9bd7ed09ceda85371",
+      "bytes": 3209
+    },
+    "fixtures/bundles/V03.json": {
+      "sha256": "c95254dc7249341d5aeed6e08d8be996bd9e504855c00a2a15cec7cda742eb3a",
+      "bytes": 3126
+    },
+    "fixtures/bundles/V04.json": {
+      "sha256": "15cee5d94a42ade369265378c4cbc72957b7fd83acebaaf1739509f6c4a2b107",
+      "bytes": 2982
+    },
+    "fixtures/bundles/V05.json": {
+      "sha256": "66a8a85b27b72731f00afb78f228fd93cb7c1af770273a70305a124ec7f8139a",
+      "bytes": 2760
+    },
+    "fixtures/bundles/V06.json": {
+      "sha256": "c212467b34c1370864127cb3a851f5fdc04fbce4f68a3db9e96a4704d02842c3",
+      "bytes": 3147
+    },
+    "fixtures/bundles/V07.json": {
+      "sha256": "5f2f5125735cc745b0d3f1de6fc083da0d4d4b974795cdce0f9abec9f41315f2",
+      "bytes": 2746
+    },
+    "fixtures/model_scripts/D14.json": {
+      "sha256": "bd57baf30a26cbe9ce753623102614ef12c0b241f2f0d0860e48c80367dbf9d8",
+      "bytes": 555
+    },
+    "fixtures/model_scripts/I04.json": {
+      "sha256": "96cac4b82574a13abe273d03b4c9c90a0178885330aa2be43ced50cae7b9fa61",
+      "bytes": 29
+    },
+    "fixtures/model_scripts/V07.json": {
+      "sha256": "876c6f01a3435f5b87017406f34be5f0f9e1d5f9a871ca99ed63086c2e4ee84c",
+      "bytes": 156
+    },
+    "fixtures/split.json": {
+      "sha256": "d5aa005d1ccdfc15619e31532df176f1d1efd4277e8697a036845626c640ad9a",
+      "bytes": 64
+    },
+    "labels/labels.json": {
+      "sha256": "808cad1f90c5bf08d3e617970a2c637cb66388109a7929bc5ddf22f368426d15",
+      "bytes": 7871
+    },
+    "oracle/cases.py": {
+      "sha256": "43daa282115061d4135659dcbe3b8425154ecc9ba3dfb48e471fd37367f38b44",
+      "bytes": 4825
+    },
+    "oracle/make_labels.py": {
+      "sha256": "e8f6d3a05c55e600c95e9c9c54189b5b54c7050141edf27a995e46b627536763",
+      "bytes": 5272
+    },
+    "prompts/reviewer_prompt.md": {
+      "sha256": "6c280c3280c6ecc648bb77aa65b8b095cffcb03fe0ad4592b56f6e03ce06a09c",
+      "bytes": 1419
+    },
+    "reviewer/__init__.py": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "reviewer/__main__.py": {
+      "sha256": "bac97ca09995c8d07fadd2e8f9e79415362e003e939676d2a15276836620beb9",
+      "bytes": 1671
+    },
+    "reviewer/effective.py": {
+      "sha256": "bbe6ddbb73c96a761b06bd66aa59e626ad36363246f7a348dc3441287a67f081",
+      "bytes": 12038
+    },
+    "reviewer/equiv.py": {
+      "sha256": "f93f9b3cbcd1bec66669f184a0bbdd8f3a4712717a9c0d041693ab7632db12f7",
+      "bytes": 9398
+    },
+    "reviewer/ir.py": {
+      "sha256": "f07ad9aa7ce270f0794f4cbe6eac209477b61b89efc689a42784a14445772815",
+      "bytes": 7683
+    },
+    "reviewer/lang.py": {
+      "sha256": "c402a7ae975e547b8d570b9e952e9c4c14a94146d86186efb6cdfcd75c84c159",
+      "bytes": 8205
+    },
+    "reviewer/model/__init__.py": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "reviewer/model/advisor.py": {
+      "sha256": "5a2e9a6d12fcb4adca2c4e5ede6d0147f611e25dd5a7eb0c77a410497616bd21",
+      "bytes": 6296
+    },
+    "reviewer/model/anthropic_client.py": {
+      "sha256": "f7390dea03f571885e54863949b8a0040f35f816a7e0d7dd78f46c8226101f8f",
+      "bytes": 3176
+    },
+    "reviewer/model/client.py": {
+      "sha256": "d7091a0a73a8f3f781fd0cb0e8bf5a6f2a2e4bda1d7387e41574200967f67d11",
+      "bytes": 809
+    },
+    "reviewer/model/fake.py": {
+      "sha256": "6e681bf0570463fb121871b2794be1934abb8bafb0f205aeb1e66c06c0fd9aa0",
+      "bytes": 1409
+    },
+    "reviewer/pysubset.py": {
+      "sha256": "758d2711198e9ce74cb3bd9937fdc01399e8e507646e69aecb9cf15332c7cf9c",
+      "bytes": 15559
+    },
+    "reviewer/review.py": {
+      "sha256": "49714256586d704423c3593016ef00510dff46bfbf89c31d77a9769d66a2af53",
+      "bytes": 43576
+    },
+    "reviewer/schemas.py": {
+      "sha256": "3e05a2c2545ff998d9dfeab66e01d42c12738a0a057bb5b1ab85eb7ab4ded958",
+      "bytes": 8618
+    }
+  }
+}

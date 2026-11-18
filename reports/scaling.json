@@ -1,0 +1,89 @@
+{
+ "config": {
+  "grid_cap": 1500000,
+  "time_budget_s": 20.0
+ },
+ "rows": [
+  {
+   "extra_numeric_fields": 0,
+   "status": "PASS",
+   "mode": "exhaustive",
+   "cells_total": 12,
+   "cells_evaluated": 9,
+   "runtime_s": 0.002,
+   "expected_status": "PASS"
+  },
+  {
+   "extra_numeric_fields": 1,
+   "status": "PASS",
+   "mode": "exhaustive",
+   "cells_total": 48,
+   "cells_evaluated": 36,
+   "runtime_s": 0.002,
+   "expected_status": "PASS"
+  },
+  {
+   "extra_numeric_fields": 2,
+   "status": "PASS",
+   "mode": "exhaustive",
+   "cells_total": 192,
+   "cells_evaluated": 144,
+   "runtime_s": 0.003,
+   "expected_status": "PASS"
+  },
+  {
+   "extra_numeric_fields": 3,
+   "status": "PASS",
+   "mode": "exhaustive",
+   "cells_total": 768,
+   "cells_evaluated": 576,
+   "runtime_s": 0.01,
+   "expected_status": "PASS"
+  },
+  {
+   "extra_numeric_fields": 4,
+   "status": "PASS",
+   "mode": "exhaustive",
+   "cells_total": 3072,
+   "cells_evaluated": 2304,
+   "runtime_s": 0.03,
+   "expected_status": "PASS"
+  },
+  {
+   "extra_numeric_fields": 5,
+   "status": "PASS",
+   "mode": "exhaustive",
+   "cells_total": 12288,
+   "cells_evaluated": 9216,
+   "runtime_s": 0.127,
+   "expected_status": "PASS"
+  },
+  {
+   "extra_numeric_fields": 6,
+   "status": "PASS",
+   "mode": "exhaustive",
+   "cells_total": 49152,
+   "cells_evaluated": 36864,
+   "runtime_s": 0.459,
+   "expected_status": "PASS"
+  },
+  {
+   "extra_numeric_fields": 7,
+   "status": "PASS",
+   "mode": "exhaustive",
+   "cells_total": 196608,
+   "cells_evaluated": 147456,
+   "runtime_s": 1.599,
+   "expected_status": "PASS"
+  },
+  {
+   "extra_numeric_fields": 8,
+   "status": "PASS",
+   "mode": "exhaustive",
+   "cells_total": 786432,
+   "cells_evaluated": 589824,
+   "runtime_s": 9.175,
+   "expected_status": "PASS"
+  }
+ ]
+}

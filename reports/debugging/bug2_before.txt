@@ -1,0 +1,1 @@
+  findings:   14/14 correct defect+location, oracle-valid counterexamples 14/14, unsupported blockers 2/16
